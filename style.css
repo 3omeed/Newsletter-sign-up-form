@@ -1,0 +1,235 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #36384d;
+}
+
+/* header */
+
+.container {
+  max-width: 635px;
+  height: 440px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: white;
+  padding: 17px;
+}
+.left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 30px;
+}
+.left .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left .text h1 {
+  font-family: 'Roboto-Bold';
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.left .text #intro {
+  font-size: 0.7rem;
+  font-family: 'Roboto-Bold';
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+
+.left .text .advantages * {
+  display: flex;
+  align-items: flex-start;
+  font-family: 'Roboto-Bold';
+}
+.container .icon {
+  width: 15px;
+  margin-right: 10px;
+}
+
+.left .text .advantages p {
+  font-size: 0.7rem;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+form label {
+  margin-bottom: 10px;
+  font-family: 'Roboto-Bold';
+  font-weight: 200;
+  font-size: 0.8rem;
+}
+form input {
+  height: 20px;
+  border-radius: 5px;
+  border: solid gray 1px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+form input:hover {
+  border: solid 2px #ff547688;
+}
+
+button {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.4s;
+}
+button:hover {
+  background: linear-gradient(to right, #ff6155 , #ff5476);
+  box-shadow: 0px 10px 15px -10px #ff5476;
+}
+.img {
+  height: 100%;
+}
+img {
+  height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    position: relative;
+    justify-content: flex-start;
+    height: 600px;
+    padding: 0px;
+    margin: 0 auto;
+  }
+  .left {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  .left .text .advantages {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .container .img {
+    width: 100%;
+    height: 35%;
+  }
+  .container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+  }
+  .container .left {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    max-width: 300px;
+  }
+}
+
+/* <!-- Success message start --> */
+.second-container {
+  max-width: 300px;
+  height: 330px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  border-radius: 25px;
+  background-color: white;
+  padding: 20px 40px;
+}
+@media screen and (max-width: 767px) {
+  .second-container {
+    width: 250px;
+    padding: 15px 30px;
+  }
+}
+
+.second-container .icon {
+  width: 50px;
+  height: 50px;
+}
+.second-container h2 {
+  font-family: 'Roboto-Bold';
+  font-size: 2.7rem;
+  line-height: 40px;
+  font-weight: 800;
+}
+.second-container p {
+  font-size: 0.8rem;
+  line-height: 17px;
+}
+.second-container p span {
+  font-weight: bold;
+}
+/* <!-- Success message end --> */
+
+/* footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* script */
+
+.invisible {
+  display: none;
+}
+
+.error-class {
+  color: red;
+  font-size: 0.7rem;
+  position: absolute;
+  right: 0;
+}
+
+.error-input {
+  background-color: #ff547623;
+  color: #ff5476;
+}
